@@ -3,6 +3,9 @@ import numpy as np
 from tree import TreeNode, Split
 
 def gini_coeff(target: pd.Series, categories: list[object]):
+    """
+    Basic implementation of the Gini coefficient
+    """
     props = [(target[target == cat].shape[0]/target.shape[0])**2 for cat in categories]
     return 1 - sum(props)
 
@@ -13,7 +16,7 @@ def get_best_split(column: pd.Series) -> tuple[Split, float]:
 
 def CART(data: pd.DataFrame, target: pd.Series, current_node: TreeNode, categories = None, thresh: float = 0.95):
     """
-    Implemtents the CART algorithm using recursion and side-effects
+    Basic implemtentation of the CART algorithm using recursion and side-effects
     Not the greatest fan of this for readability reasons, but easier to write
     """
     # in the first call, obtain the categories

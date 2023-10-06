@@ -16,6 +16,11 @@ class Split:
     
 
 class TreeNode:
+    """
+    Class to describe a decision tree
+    May be more efficient to not structure this as a recursive class down the track, 
+    but this is easier to think about
+    """
     def __init__(self, parent = None, is_leaf: bool = False) -> None:
         # note that this method expects parent to be of type TreeNode
         self.parent = parent
