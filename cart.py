@@ -11,6 +11,10 @@ def gini_coeff(target: pd.Series, categories: list[object]):
 
 
 def get_best_split(column: pd.Series) -> tuple[Split, float]:
+    """
+    For a given column, find the best split
+    Best split here is defined as the split that minimises the Gini coefficient
+    """
     pass
 
 
